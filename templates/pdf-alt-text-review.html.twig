@@ -1,0 +1,48 @@
+{#
+/**
+ * @file
+ * Template for PDF Alt-Text Review display.
+ *
+ * Available variables:
+ * - media: The media entity.
+ * - filename: File name of the PDF.
+ * - images: List of extracted images with alt-texts.
+ * - stats: Statistics on tagged vs untagged images.
+ */
+#}
+<div class="pdf-alt-text-review-container">
+  <div class="pdf-alt-text-header">
+    <h3>{{ 'PDF Accessibility Inspection'|t }}</h3>
+    <p>
+      {{ 'File:'|t }} <strong>{{ filename }}</strong> |
+      {{ 'Total images:'|t }} {{ images|length }}
+    </p>
+  </div>
+
+  {% if images is not empty %}
+    <div class="pdf-alt-text-grid">
+      {% for img in images %}
+        <div class="pdf-alt-text-card">
+          <div class="pdf-alt-text-card__meta">
+            <span class="badge">{{ 'Page'|t }} {{ img.page }}</span>
+            <span class="dimensions">{{ img.width }} &times; {{ img.height }} pt</span>
+          </div>
+
+          {% if img.context %}
+            <div class="pdf-alt-text-card__context">
+              <strong>{{ 'Surrounding context:'|t }}</strong>
+              <p>&ldquo;{{ img.context|slice(0, 150) }}...&rdquo;</p>
+            </div>
+          {% endif %}
+
+          <div class="pdf-alt-text-card__alt">
+            <label>{{ 'Alt-text (PDF/UA):'|t }}</label>
+            <p>{{ img.alt_text|default('<em>No alt-text present</em>'|t) }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  {% else %}
+    <p>{{ 'No images found in this PDF.'|t }}</p>
+  {% endif %}
+</div>

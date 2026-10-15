@@ -1,0 +1,43 @@
+pdf_alt_text.settings:
+  type: config_object
+  label: 'PDF Alt-Text Generator settings'
+  mapping:
+    processing_mode:
+      type: string
+      label: 'Processing mode'
+    api_endpoint:
+      type: uri
+      label: 'Microservice API endpoint'
+    llm_api_url:
+      type: uri
+      label: 'Vision LLM endpoint URL'
+    model:
+      type: string
+      label: 'Model identifier'
+    api_key:
+      type: string
+      label: 'API key'
+    default_language:
+      type: string
+      label: 'Default target language'
+    min_size:
+      type: integer
+      label: 'Minimum image dimension'
+    context_margin_pt:
+      type: float
+      label: 'Context margin'
+    cli_binary_path:
+      type: string
+      label: 'CLI binary path'
+    python_executable:
+      type: string
+      label: 'Python executable path'
+    auto_process_on_upload:
+      type: boolean
+      label: 'Auto-process on upload'
+    save_as_new_revision:
+      type: boolean
+      label: 'Save media as new revision'
+    create_screen_annotations:
+      type: boolean
+      label: 'Create screen annotations'

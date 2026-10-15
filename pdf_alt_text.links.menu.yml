@@ -1,0 +1,5 @@
+pdf_alt_text.settings:
+  title: 'PDF Alt-Text Generator'
+  description: 'Configure Vision LLM connection and PDF alt-text accessibility settings.'
+  parent: system.admin_config_media
+  route_name: pdf_alt_text.settings

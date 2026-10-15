@@ -1,0 +1,240 @@
+# Dutch translation for PDF Alt-Text Generator Drupal module.
+# Copyright (C) 2026
+# This file is distributed under the same license as the pdf_alt_text package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: pdf_alt_text (1.0.0)\n"
+"POT-Creation-Date: 2026-09-29 19:24+0200\n"
+"PO-Revision-Date: 2026-09-29 19:24+0200\n"
+"Language-Team: Dutch\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: nl\n"
+
+msgid "PDF Alt-Text Generator"
+msgstr "PDF Alt-Text Generator"
+
+msgid "Automatically generate accessible alt-text for images in PDF documents using a Vision LLM (WCAG 2.1 & PDF/UA compliant)."
+msgstr "Automatisch afbeeldingen in PDF-documenten van toegankelijke alt-tekst voorzien via een Vision LLM (WCAG 2.1 & PDF/UA compliant)."
+
+msgid "About PDF Alt-Text Generator"
+msgstr "Over PDF Alt-Text Generator"
+
+msgid "This module automatically generates accessible alt-text for images inside PDF documents using a Vision LLM in compliance with WCAG 2.1 and PDF/UA-1 standards."
+msgstr "Deze module voorziet afbeeldingen in PDF-documenten automatisch van toegankelijke alt-teksten via een Vision LLM conform de WCAG 2.1 en PDF/UA-1 standaarden."
+
+msgid "Administer PDF Alt-Text settings"
+msgstr "PDF Alt-Text instellingen beheren"
+
+msgid "Access and configure PDF Alt-Text module settings and Vision LLM connections."
+msgstr "Toegang tot het configureren van de PDF Alt-Text module en Vision LLM-verbindingen."
+
+msgid "Generate and review PDF alt-texts"
+msgstr "PDF Alt-Teksten genereren en reviewen"
+
+msgid "Allow generating, reviewing, editing, and applying alt-texts to PDF media items."
+msgstr "Toestaan om alt-teksten voor PDF media te genereren, te bewerken en toe te passen."
+
+msgid "PDF Alt-Text Generator Settings"
+msgstr "PDF Alt-Text Generator Instellingen"
+
+msgid "PDF Alt-Text Review"
+msgstr "PDF Alt-Teksten Review"
+
+msgid "Alt-Text"
+msgstr "Alt-Teksten"
+
+msgid "Configure Vision LLM connection and PDF alt-text accessibility settings."
+msgstr "Configureer de Vision LLM koppeling en instellingen voor PDF alt-teksten."
+
+msgid "Connected and operational"
+msgstr "Verbonden en online"
+
+msgid "Offline / Not reachable"
+msgstr "Offline / Niet bereikbaar"
+
+msgid "Backend status (@mode):"
+msgstr "Backend status (@mode):"
+
+msgid "General settings"
+msgstr "Algemene instellingen"
+
+msgid "Processing mode"
+msgstr "Verwerkingsmethode"
+
+msgid "Local Python CLI (executes directly on the server host)"
+msgstr "Lokale Python CLI (direct via server shell / Python proces)"
+
+msgid "REST API Microservice (connects to Node.js/FastAPI server)"
+msgstr "REST API Microservice (verbindt met Node.js of FastAPI server)"
+
+msgid "Select how Drupal communicates with the PDF alt-text engine."
+msgstr "Kies hoe Drupal communiceert met de PDF alt-text engine."
+
+msgid "Default target language for alt-text"
+msgstr "Standaard doeltaal voor alt-teksten"
+
+msgid "Dutch (nl)"
+msgstr "Nederlands (nl)"
+
+msgid "English (en)"
+msgstr "Engels (en)"
+
+msgid "German (de)"
+msgstr "Duits (de)"
+
+msgid "French (fr)"
+msgstr "Frans (fr)"
+
+msgid "Vision LLM connection"
+msgstr "Vision LLM Verbinding"
+
+msgid "OpenAI-compatible endpoint URL"
+msgstr "OpenAI-compatibel Endpoint URL"
+
+msgid "For example: http://localhost:8080/v1 (llama-server / llama-router), http://localhost:11434/v1 (Ollama), or https://openrouter.ai/api/v1."
+msgstr "Bijvoorbeeld: http://localhost:8080/v1 (llama-server / llama-router), http://localhost:11434/v1 (Ollama), of https://openrouter.ai/api/v1."
+
+msgid "API Key (optional)"
+msgstr "API Sleutel (optioneel)"
+
+msgid "Leave empty or set to \"not-needed\" for local LLM servers without authentication."
+msgstr "Laat leeg of vul \"not-needed\" in voor lokale LLM servers zonder authenticatie."
+
+msgid "Model identifier (optional)"
+msgstr "Modelnaam (optioneel)"
+
+msgid "For example: qwen3.8-27b, qwen2.5-vl, gemma-4. Leave blank for auto-detection of the first active model."
+msgstr "Bijvoorbeeld: qwen3.8-27b, qwen2.5-vl, gemma-4. Laat leeg voor automatische detectie van het eerste actieve model."
+
+msgid "PDF & Accessibility settings"
+msgstr "PDF & Toegankelijkheid Instellingen"
+
+msgid "Minimum image dimension (pt / pixels)"
+msgstr "Minimale afbeeldingsafmeting (pt / pixels)"
+
+msgid "Images smaller than this threshold are treated as decorative and skipped."
+msgstr "Afbeeldingen kleiner dan deze afmeting worden als decoratief beschouwd en overgeslagen."
+
+msgid "Save Media as new revision"
+msgstr "Media opslaan als nieuwe revisie"
+
+msgid "Preserves the original untagged PDF in media revision history when saving."
+msgstr "Behoudt de originele PDF in de revisiegeschiedenis wanneer een getagde PDF wordt opgeslagen."
+
+msgid "Add interactive screen annotations (/Annot /Screen)"
+msgstr "Interactieve hover-annotaties toevoegen (/Annot /Screen)"
+
+msgid "Displays alt-text as interactive tooltips when hovering over images in desktop PDF viewers."
+msgstr "Maakt alt-teksten zichtbaar als interactieve tooltip in PDF-viewers wanneer de muis boven de afbeelding hangt."
+
+msgid "Advanced CLI & Server paths"
+msgstr "Geavanceerde CLI & Server paden"
+
+msgid "Python executable path"
+msgstr "Python executable pad"
+
+msgid "Path to Python 3 with the pdf_alt_text package installed (e.g. /var/www/.venv/bin/python3 or python3)."
+msgstr "Pad naar Python 3 met het pdf_alt_text package geïnstalleerd (bijv. /var/www/.venv/bin/python3 of python3)."
+
+msgid "Microservice API endpoint (for API mode)"
+msgstr "Microservice API Endpoint (voor API-modus)"
+
+msgid "Applies only when processing mode is set to REST API Microservice."
+msgstr "Alleen van toepassing wanneer verwerkingsmethode op REST API Microservice staat."
+
+msgid "Media entity does not contain a PDF document."
+msgstr "Media entiteit bevat geen PDF-bestand."
+
+msgid "Manage PDF Alt-Texts for: @title"
+msgstr "PDF Alt-Teksten beheren voor: @title"
+
+msgid "File: <strong>@file</strong> (@size KB)"
+msgstr "Bestand: <strong>@file</strong> (@size KB)"
+
+msgid "Found in document: <strong>@total</strong> images, of which <strong>@tagged</strong> already have alt-text and <strong>@untagged</strong> are missing alt-text."
+msgstr "Gevonden in document: <strong>@total</strong> afbeeldingen, waarvan <strong>@tagged</strong> reeds voorzien van alt-tekst en <strong>@untagged</strong> zonder alt-tekst."
+
+msgid "No images meeting minimum size requirements were found in this PDF."
+msgstr "Er zijn geen afbeeldingen aangetroffen in deze PDF die voldoen aan de minimale afmetingen."
+
+msgid "Generate Alt-Texts via Vision AI"
+msgstr "Genereer Alt-Teksten via Vision AI"
+
+msgid "Review and edit the AI-generated alt-texts below. Click \"Apply & Tag PDF\" to compile the standard-compliant PDF/UA logical structure tree."
+msgstr "Controleer en bewerk de onderstaande gegenereerde alt-teksten. Klik vervolgens op \"Toepassen & PDF Taggen\" om de PDF/UA-conforme structuur op te slaan."
+
+msgid "Page & ID"
+msgstr "Pagina & ID"
+
+msgid "Dimensions"
+msgstr "Afmetingen"
+
+msgid "Surrounding Context"
+msgstr "Omliggende context"
+
+msgid "Generated Alt-Text"
+msgstr "Gegenereerde Alt-Tekst"
+
+msgid "Decorative"
+msgstr "Decoratief"
+
+msgid "No images available."
+msgstr "Geen afbeeldingen beschikbaar."
+
+msgid "Page @page"
+msgstr "Pagina @page"
+
+msgid "No context available"
+msgstr "Geen context beschikbaar"
+
+msgid "Apply & Tag PDF (PDF/UA)"
+msgstr "Toepassen & PDF Taggen (PDF/UA)"
+
+msgid "Regenerate"
+msgstr "Opnieuw genereren"
+
+msgid "Analyzing document and generating alt-texts using Vision LLM..."
+msgstr "Bezig met analyseren en genereren van alt-teksten via Vision LLM..."
+
+msgid "Alt-texts successfully generated! Review them below."
+msgstr "Alt-teksten succesvol gegenereerd! Controleer de teksten hieronder."
+
+msgid "An error occurred during generation: @err"
+msgstr "Er is een fout opgetreden bij het genereren: @err"
+
+msgid "The PDF was successfully updated with PDF/UA logical structure tree and accessible alt-texts!"
+msgstr "De PDF is succesvol voorzien van PDF/UA-conforme structuurbomen en alt-teksten!"
+
+msgid "An error occurred while tagging and saving the PDF document."
+msgstr "Er is een fout opgetreden bij het taggen en opslaan van het PDF-bestand."
+
+msgid "PDF Alt-Text Background Processor"
+msgstr "PDF Alt-Text Achtergrondverwerker"
+
+msgid "Generate PDF Alt-Texts (Background Queue)"
+msgstr "Genereer PDF Alt-Teksten (Achtergrondtaak)"
+
+msgid "PDF Accessibility Inspection"
+msgstr "PDF Toegankelijkheidscontrole"
+
+msgid "File:"
+msgstr "Bestand:"
+
+msgid "Total images:"
+msgstr "Totaal afbeeldingen:"
+
+msgid "Surrounding context:"
+msgstr "Omliggende context:"
+
+msgid "Alt-text (PDF/UA):"
+msgstr "Alt-tekst (PDF/UA):"
+
+msgid "No alt-text present"
+msgstr "Geen alt-tekst aanwezig"
+
+msgid "No images found in this PDF."
+msgstr "Er zijn geen afbeeldingen aangetroffen in deze PDF."

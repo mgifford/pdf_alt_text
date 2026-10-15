@@ -1,0 +1,86 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for PDF Alt-Text Generator.
+ */
+
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Url;
+use Drupal\media\MediaInterface;
+
+/**
+ * Implements hook_help().
+ */
+function pdf_alt_text_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.pdf_alt_text':
+      $output = '<h3>' . t('About PDF Alt-Text Generator') . '</h3>';
+      $output .= '<p>' . t('This module automatically generates accessible alt-text for images inside PDF documents using a Vision LLM in compliance with WCAG 2.1 and PDF/UA-1 standards.') . '</p>';
+      return $output;
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function pdf_alt_text_theme($existing, $type, $theme, $path) {
+  return [
+    'pdf_alt_text_review' => [
+      'variables' => [
+        'media' => NULL,
+        'filename' => NULL,
+        'images' => [],
+        'stats' => [],
+      ],
+      'template' => 'pdf-alt-text-review',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_entity_operation().
+ *
+ * Adds quick access operation on the Media listing page (/admin/content/media).
+ */
+function pdf_alt_text_entity_operation(EntityInterface $entity) {
+  $operations = [];
+
+  if ($entity instanceof MediaInterface && \Drupal::currentUser()->hasPermission('use pdf alt text')) {
+    if (_pdf_alt_text_media_has_pdf($entity)) {
+      $operations['pdf_alt_text'] = [
+        'title' => t('Alt-Text'),
+        'weight' => 50,
+        'url' => Url::fromRoute('pdf_alt_text.media_review', ['media' => $entity->id()]),
+      ];
+    }
+  }
+
+  return $operations;
+}
+
+/**
+ * Helper to determine if a Media entity contains a PDF document.
+ */
+function _pdf_alt_text_media_has_pdf(MediaInterface $media): bool {
+  try {
+    $source_field = $media->getSource()->getSourceFieldDefinition($media->bundle());
+  }
+  catch (\Exception) {
+    return FALSE;
+  }
+  if ($source_field) {
+    $field_name = $source_field->getName();
+    if ($media->hasField($field_name) && !$media->get($field_name)->isEmpty()) {
+      /** @var \Drupal\file\FileInterface $file */
+      $file = $media->get($field_name)->entity;
+      if ($file) {
+        $mime = $file->getMimeType();
+        $filename = strtolower($file->getFilename());
+        return $mime === 'application/pdf' || str_ends_with($filename, '.pdf');
+      }
+    }
+  }
+  return false;
+}

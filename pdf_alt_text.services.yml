@@ -1,0 +1,10 @@
+services:
+  pdf_alt_text.client:
+    class: Drupal\pdf_alt_text\Service\PdfAltTextService
+    arguments:
+      - '@config.factory'
+      - '@http_client'
+      - '@file_system'
+      - '@file.repository'
+      - '@entity_type.manager'
+      - '@logger.factory'
