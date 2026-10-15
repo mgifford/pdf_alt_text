@@ -1,0 +1,8 @@
+administer pdf alt text:
+  title: 'Administer PDF Alt-Text settings'
+  description: 'Access and configure PDF Alt-Text module settings and Vision LLM connections.'
+  restrict access: true
+
+use pdf alt text:
+  title: 'Generate and review PDF alt-texts'
+  description: 'Allow generating, reviewing, editing, and applying alt-texts to PDF media items.'

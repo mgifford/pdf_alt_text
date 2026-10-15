@@ -1,0 +1,5 @@
+pdf_alt_text.media_review_tab:
+  route_name: pdf_alt_text.media_review
+  title: 'Alt-Text'
+  base_route: entity.media.canonical
+  weight: 20

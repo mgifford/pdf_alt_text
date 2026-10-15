@@ -1,0 +1,12 @@
+name: 'PDF Alt-Text Generator'
+type: module
+description: 'Automatically generate accessible alt-text for images in PDF documents using a Vision LLM (WCAG 2.1 & PDF/UA compliant).'
+package: 'Accessibility'
+core_version_requirement: ^10 || ^11
+configure: pdf_alt_text.settings
+dependencies:
+  - drupal:file
+  - drupal:media
+
+'interface translation project': pdf_alt_text
+'interface translation server pattern': 'modules/custom/pdf_alt_text/translations/%language.po'

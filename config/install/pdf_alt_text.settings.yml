@@ -1,0 +1,13 @@
+processing_mode: 'api'
+api_endpoint: 'http://localhost:3000'
+llm_api_url: 'http://localhost:8080/v1'
+model: ''
+api_key: ''
+default_language: 'nl'
+min_size: 50
+context_margin_pt: 70.0
+cli_binary_path: 'pdf-alt-text'
+python_executable: 'python3'
+auto_process_on_upload: false
+save_as_new_revision: true
+create_screen_annotations: true

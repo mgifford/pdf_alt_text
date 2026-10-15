@@ -1,0 +1,20 @@
+pdf_alt_text.settings:
+  path: '/admin/config/media/pdf-alt-text'
+  defaults:
+    _form: '\Drupal\pdf_alt_text\Form\SettingsForm'
+    _title: 'PDF Alt-Text Generator Settings'
+  requirements:
+    _permission: 'administer pdf alt text'
+
+pdf_alt_text.media_review:
+  path: '/media/{media}/pdf-alt-text'
+  defaults:
+    _form: '\Drupal\pdf_alt_text\Form\MediaAltTextReviewForm'
+    _title: 'PDF Alt-Text Review'
+  requirements:
+    _permission: 'use pdf alt text'
+    _custom_access: '\Drupal\pdf_alt_text\Form\MediaAltTextReviewForm::checkAccess'
+  options:
+    parameters:
+      media:
+        type: entity:media
